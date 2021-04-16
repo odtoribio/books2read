@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/books2read/static/css/main.0efa5fbb.chunk.css",
-    "main.js": "/books2read/static/js/main.5dd13934.chunk.js",
-    "main.js.map": "/books2read/static/js/main.5dd13934.chunk.js.map",
+    "main.css": "/books2read/static/css/main.8db73faa.chunk.css",
+    "main.js": "/books2read/static/js/main.3fa52c76.chunk.js",
+    "main.js.map": "/books2read/static/js/main.3fa52c76.chunk.js.map",
     "runtime-main.js": "/books2read/static/js/runtime-main.bb298f48.js",
     "runtime-main.js.map": "/books2read/static/js/runtime-main.bb298f48.js.map",
-    "static/js/2.df80c61d.chunk.js": "/books2read/static/js/2.df80c61d.chunk.js",
-    "static/js/2.df80c61d.chunk.js.map": "/books2read/static/js/2.df80c61d.chunk.js.map",
+    "static/js/2.a46e93d7.chunk.js": "/books2read/static/js/2.a46e93d7.chunk.js",
+    "static/js/2.a46e93d7.chunk.js.map": "/books2read/static/js/2.a46e93d7.chunk.js.map",
     "index.html": "/books2read/index.html",
-    "static/css/main.0efa5fbb.chunk.css.map": "/books2read/static/css/main.0efa5fbb.chunk.css.map",
-    "static/js/2.df80c61d.chunk.js.LICENSE.txt": "/books2read/static/js/2.df80c61d.chunk.js.LICENSE.txt",
+    "static/css/main.8db73faa.chunk.css.map": "/books2read/static/css/main.8db73faa.chunk.css.map",
+    "static/js/2.a46e93d7.chunk.js.LICENSE.txt": "/books2read/static/js/2.a46e93d7.chunk.js.LICENSE.txt",
     "static/media/App.css": "/books2read/static/media/arrow-drop-down.4378492a.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.bb298f48.js",
-    "static/js/2.df80c61d.chunk.js",
-    "static/css/main.0efa5fbb.chunk.css",
-    "static/js/main.5dd13934.chunk.js"
+    "static/js/2.a46e93d7.chunk.js",
+    "static/css/main.8db73faa.chunk.css",
+    "static/js/main.3fa52c76.chunk.js"
   ]
 }
