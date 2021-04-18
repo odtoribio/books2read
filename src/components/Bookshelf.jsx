@@ -3,20 +3,20 @@ import Book from './Book';
 
 class Bookshelf extends Component {
 
-    onUpdateShelf = (bookId, newShelf) => {
-        this.props.updateShelf(bookId, newShelf)
+    onUpdateShelf = ( book, shelfName ) => {
+        this.props.updateShelf( book, shelfName )
     }
 
     render() {
         const { shelf, filterBooks } = this.props;
-        const books = filterBooks(shelf.id);
+        const books = filterBooks( shelf.id );
         return (
             <div className="bookshelf">
-                <h2 className="bookshelf-title">{shelf.title}</h2>
+                <h2 className="bookshelf-title">{ shelf.title }</h2>
                 <div className="bookshelf-books">
                     <ol className="books-grid">
                         {
-                            books.map(book => (
+                            books.map( book => (
                                 <li key = { book.id }>
                                     <Book 
                                         book = { book }

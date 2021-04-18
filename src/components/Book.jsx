@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 class Book extends Component {
 
   //const {title, authors, status, imageUrl} = this.props;
-  handleChange = (event) => {
-    let value = event.target.value;
-    this.props.updateShelf(this.props.book.id, value)
+  handleChange = ( event ) => {
+    let shelfName = event.target.value;
+    this.props.updateShelf( this.props.book, shelfName )
   }
 
   render() {
