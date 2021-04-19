@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/books2read/static/css/main.8db73faa.chunk.css",
-    "main.js": "/books2read/static/js/main.6d51a119.chunk.js",
-    "main.js.map": "/books2read/static/js/main.6d51a119.chunk.js.map",
+    "main.js": "/books2read/static/js/main.f35f855a.chunk.js",
+    "main.js.map": "/books2read/static/js/main.f35f855a.chunk.js.map",
     "runtime-main.js": "/books2read/static/js/runtime-main.bb298f48.js",
     "runtime-main.js.map": "/books2read/static/js/runtime-main.bb298f48.js.map",
-    "static/js/2.e0fe3ab2.chunk.js": "/books2read/static/js/2.e0fe3ab2.chunk.js",
-    "static/js/2.e0fe3ab2.chunk.js.map": "/books2read/static/js/2.e0fe3ab2.chunk.js.map",
+    "static/js/2.057a2863.chunk.js": "/books2read/static/js/2.057a2863.chunk.js",
+    "static/js/2.057a2863.chunk.js.map": "/books2read/static/js/2.057a2863.chunk.js.map",
     "index.html": "/books2read/index.html",
     "static/css/main.8db73faa.chunk.css.map": "/books2read/static/css/main.8db73faa.chunk.css.map",
-    "static/js/2.e0fe3ab2.chunk.js.LICENSE.txt": "/books2read/static/js/2.e0fe3ab2.chunk.js.LICENSE.txt",
+    "static/js/2.057a2863.chunk.js.LICENSE.txt": "/books2read/static/js/2.057a2863.chunk.js.LICENSE.txt",
     "static/media/App.css": "/books2read/static/media/arrow-drop-down.4378492a.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.bb298f48.js",
-    "static/js/2.e0fe3ab2.chunk.js",
+    "static/js/2.057a2863.chunk.js",
     "static/css/main.8db73faa.chunk.css",
-    "static/js/main.6d51a119.chunk.js"
+    "static/js/main.f35f855a.chunk.js"
   ]
 }
