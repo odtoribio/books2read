@@ -2,15 +2,16 @@ import React, { Component } from 'react';
 
 class Book extends Component {
 
-  //const {title, authors, status, imageUrl} = this.props;
   handleChange = ( event ) => {
     let shelfName = event.target.value;
     this.props.updateShelf( this.props.book, shelfName )
   }
 
   render() {
+
     const { book } = this.props;
     const image = book.imageLinks.thumbnail;
+    
     return (
       <div className="book">
         <div className="book-top">
@@ -20,7 +21,7 @@ class Book extends Component {
             backgroundImage: `url(${ image })` 
           }}></div>
           <div className="book-shelf-changer">
-            <select value = {book.shelf} onChange = { this.handleChange }>
+            <select value={ book.shelf || 'none' } onChange = { this.handleChange }>
               <option value="move" disabled>Move to...</option>
               <option value="currentlyReading">Currently Reading</option>
               <option value="wantToRead">Want to Read</option>
@@ -30,7 +31,7 @@ class Book extends Component {
           </div>
         </div>
         <div className="book-title">{ book.title }</div>
-        <div className="book-authors">{ book.authors.join(', ') }</div>
+        <div className="book-authors">{ book.authors ? book.authors.join(', ') : '' }</div>
       </div>
     );
   }
