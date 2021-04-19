@@ -42,7 +42,7 @@ class SearchBooks extends Component {
         return(
             <div className="search-books">
                 <div className="search-books-bar">
-                    <Link to='/'>
+                    <Link to='/books2read'>
                         <button className="close-search">Close</button>
                     </Link>
                     <div className="search-books-input-wrapper">
