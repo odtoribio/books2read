@@ -55,7 +55,7 @@ class ListBookshelves extends Component {
                     </div>
                 </div>
                 <Link
-                    to="/search"
+                    to="/books2read/search"
                     className="open-search"
                 >
                     <button>Add a book</button>
