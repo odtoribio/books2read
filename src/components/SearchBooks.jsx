@@ -20,13 +20,23 @@ class SearchBooks extends Component {
         this.setState({ searchText: text || '' });
         clearTimeout(this.typingTimeout);
         this.typingTimeout = setTimeout(()=> {
-            BooksAPI.search(text)
-                .then( result => {
-                    this.setState( prevState => ({
-                        books: Array.isArray(result) ? result : []
-                    }));
-                })
+            if (text){
+                
+                BooksAPI.search(text)
+                    .then( result => {
+                        console.log(text, result);
+                        this.setState( prevState => ({
+                            books: Array.isArray(result) ? result : []
+                        }));
+                    })
+            }else{
+                this.cleanBookList()
+            }
         },1000)
+    }
+
+    cleanBookList = () =>{
+        this.setState({books: []});
     }
 
     onUpdateShelf = (bookToUpdate, newShelf) => {
@@ -38,7 +48,6 @@ class SearchBooks extends Component {
     }
 
     render(){
-        console.log("libros", this.state.books);
         return(
             <div className="search-books">
                 <div className="search-books-bar">

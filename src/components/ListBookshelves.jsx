@@ -15,7 +15,7 @@ class ListBookshelves extends Component {
 
     updateShelf = (bookToUpdate, newShelf) => {
         this.setState(oldState => ({
-            books: oldState.books.map( book => book.id === bookToUpdate.id ? { ...book, shelf:newShelf } : book )
+            books: oldState.books.map( book => book.id === bookToUpdate.id ? { ...book, shelf: newShelf } : book )
         }))
 
         BooksAPI.update(bookToUpdate, newShelf);

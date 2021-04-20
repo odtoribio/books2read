@@ -1,15 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 const Book = ( props ) => {
 
   const { book } = props;
-  const image = book.imageLinks.thumbnail;
+  const image = book.imageLinks ? book.imageLinks.thumbnail : '';
 
   const handleChange = ( event ) => {
     let shelfName = event.target.value;
-    props.updateShelf( props.book, shelfName )
+    props.updateShelf( book, shelfName )
   }
+  console.log("shelf", book.shelf);
   
   return (
     <div className="book">
@@ -33,7 +34,7 @@ const Book = ( props ) => {
       <div className="book-authors">{ book.authors ? book.authors.join(', ') : '' }</div>
     </div>
   );
-  
+
 }
 
 Book.propTypes = {

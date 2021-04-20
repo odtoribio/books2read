@@ -29,11 +29,10 @@ const Bookshelf = ( props ) =>  {
             </div>
         </div>
     );
-    
 }
 
 Bookshelf.propTypes = {
-    shelf: PropTypes.string.isRequired,
+    shelf: PropTypes.object.isRequired,
     filterBooks: PropTypes.func.isRequired,
     updateShelf: PropTypes.func.isRequired
 }
