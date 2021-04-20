@@ -1,5 +1,5 @@
 # Books2read App
-
+This is a Bookshelf app that helps the user tracking the books wishlist.
 This project production is located in [https://odtoribio.github.io/books2read](https://odtoribio.github.io/books2read).
 
 ## Available Scripts
