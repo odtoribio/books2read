@@ -10,7 +10,7 @@ const Bookshelf = ( props ) =>  {
     const onUpdateShelf = ( book, shelfName ) => {
         props.updateShelf( book, shelfName )
     }
-
+ 
     return (
         <div className="bookshelf">
             <h2 className="bookshelf-title">{ shelf.title }</h2>

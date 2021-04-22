@@ -10,7 +10,6 @@ const Book = ( props ) => {
     let shelfName = event.target.value;
     props.updateShelf( book, shelfName )
   }
-  console.log("shelf", book.shelf);
   
   return (
     <div className="book">

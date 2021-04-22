@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Book from './Book';
 import * as BooksAPI from '../api/BooksAPI';
+import PropTypes from 'prop-types';
 
 class SearchBooks extends Component {
 
@@ -11,8 +12,8 @@ class SearchBooks extends Component {
     }
 
     state = {
-        books: [],
-        searchText:''
+        books:[],
+        searchText:'',
     }
 
     handleTextInput = ( event ) => {
@@ -21,27 +22,39 @@ class SearchBooks extends Component {
         clearTimeout(this.typingTimeout);
         this.typingTimeout = setTimeout(()=> {
             if (text){
-                
-                BooksAPI.search(text)
-                    .then( result => {
-                        console.log(text, result);
-                        this.setState( prevState => ({
-                            books: Array.isArray(result) ? result : []
-                        }));
-                    })
+                this.searchBooks(text);
             }else{
                 this.cleanBookList()
             }
         },1000)
     }
 
+    searchBooks = ( text ) => {
+        const searchResult = [];
+
+        BooksAPI.search( text )
+            .then( result => {
+                result.forEach( book => {
+                    this.props.books.forEach( parentStateBook => {
+                        if (book.id === parentStateBook.id){
+                            book['shelf'] = parentStateBook.shelf;
+                        }
+                    })
+                    searchResult.push(book);
+                })
+            })
+            .then(() => {
+                this.setState({books : searchResult});
+            })
+    }
+
     cleanBookList = () =>{
         this.setState({books: []});
     }
 
-    onUpdateShelf = (bookToUpdate, newShelf) => {
+    updateShelf = (bookToUpdate, newShelf) => {
         this.setState( oldState => ({
-            books: oldState.books.map( book => book.id === bookToUpdate.id ? { ...book, shelf:newShelf } : book )
+            books: oldState.books.map( book => book.id === bookToUpdate.id ? { ...book, shelf: newShelf } : book )
         }))
 
         BooksAPI.update(bookToUpdate, newShelf);
@@ -65,7 +78,7 @@ class SearchBooks extends Component {
                                 <li key = { book.id }>
                                     <Book 
                                         book = { book }
-                                        updateShelf = { this.onUpdateShelf }/>
+                                        updateShelf = { this.updateShelf }/>
                                 </li>
                             ))
                         }
@@ -74,6 +87,10 @@ class SearchBooks extends Component {
             </div>
         )
     }
+}
+
+SearchBooks.propTypes = {
+    books: PropTypes.array.isRequired
 }
 
 export default SearchBooks;
