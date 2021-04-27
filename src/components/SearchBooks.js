@@ -34,14 +34,16 @@ class SearchBooks extends Component {
 
         BooksAPI.search( text )
             .then( result => {
-                result.forEach( book => {
-                    this.props.books.forEach( parentStateBook => {
-                        if (book.id === parentStateBook.id){
-                            book['shelf'] = parentStateBook.shelf;
-                        }
+                if(Array.isArray(result) && result.length > 0 ){
+                    result.forEach( book => {
+                        this.props.books.forEach( parentStateBook => {
+                            if (book.id === parentStateBook.id){
+                                book['shelf'] = parentStateBook.shelf;
+                            }
+                        })
+                        searchResult.push(book);
                     })
-                    searchResult.push(book);
-                })
+                }
             })
             .then(() => {
                 this.setState({books : searchResult});
